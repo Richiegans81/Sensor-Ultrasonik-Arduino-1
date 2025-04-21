@@ -46,6 +46,13 @@
       "top": -161.7,
       "left": 283.9,
       "attrs": {}
+    },
+    {
+      "type": "wokwi-lcd1602",
+      "id": "lcd1",
+      "top": 390.4,
+      "left": 24.8,
+      "attrs": { "pins": "i2c" }
     }
   ],
   "connections": [
@@ -63,7 +70,11 @@
       ["v57.6", "h46.8", "v268.8", "h-153.6"]
     ],
     ["ultrasonic1:TRIG", "uno:3", "orange", ["v0"]],
-    ["ultrasonic1:ECHO", "uno:2", "blue", ["v0"]]
+    ["ultrasonic1:ECHO", "uno:2", "blue", ["v0"]],
+    ["uno:5V", "lcd1:VCC", "red", ["v76.7", "h-303.4", "v115.2"]],
+    ["uno:GND.2", "lcd1:GND", "black", ["v38.3", "h-322.5", "v144"]],
+    ["lcd1:SCL", "uno:A5.2", "magenta", ["h-67.2", "v-422.1", "h259.2"]],
+    ["uno:A4.2", "lcd1:SDA", "yellow", ["v-19.2", "h-259.6", "v326.4"]]
   ],
   "dependencies": {}
 }
